@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ./partials/head %>
+  </head>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <% include ./partials/nav %>
+    <% include ./partials/header %>
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About RoboTracker</h2>
+                <p>RoboTracker is an app created for you in this confusing time of robotics to keep track of all your mechanical servants.</p>
+                <p>In these days we all have multiple robots doing our bidding be it nefarious or heroic. How can one master keep track? We wanted to make managing your minions easy</p>
+                <p>Keep in mind that robot names are written with underscores(_) and not spaces.</p>
+            </div>
+        </div>
+    </section>
+    <section id="robots" class="content-section text-center">
+        <div class="tracker-section">
+            <div class="container">
+              <div class='row'>
+                <h3>Track Your Robots</h3>
+                <button class="btn btn-large"><a href="./robots">Get Started</a></button>
+              </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact Us For Assistance</h2>
+                <p>If your robots go rogue please contact us before they kick off the apocalypse!</p>
+                <p><a href="mailto:helptherobots@robotracker.com">helptherobots@robotracker.com</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; RoboTracker 2016</p>
+        </div>
+    </footer>
+    <% include ./partials/scripts %>
+  </body>
+</html>

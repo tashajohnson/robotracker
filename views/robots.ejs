@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ./partials/head %>
+  </head>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <% include ./partials/nav %>
+    <section id="tracker" class="content-section text-center">
+        <div class="tracker-section">
+            <div class="container">
+                <div class="row">
+                  <div class="col-s-12 col-md-4">
+                    <h3>Add Robot</h3>
+                    <form action="/robots" method="post">
+                      <input type="text" name="name" placeholder="Robot CallSign">
+                      <button class="btn btn-large" type="submit">Add</button>
+                    </form>
+                  </div>
+                  <table class="col-s-12 col-md-8">
+                    <thead>
+                      <th>Robot CallSign</th>
+                      <th>Discharge From Service</th>
+                    </thead>
+                    <tbody>
+                      <% robots.forEach( function(robot) { %>
+                        <% var href='/robots/delete/' + robot %>
+                         <tr>
+                          <td><%= robot %></td>
+                          <td><a href=<%= href %> + <%= robot %></a>Destroy</td>
+                      <% }); %>
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; RoboTracker 2016</p>
+        </div>
+    </footer>
+    <% include ./partials/scripts %>
+  </body>
+</html>
